@@ -1,0 +1,29 @@
+# Openimages custom dataset
+
+# To get dataset, run:
+#import fiftyone
+#dataset = fiftyone.zoo.load_zoo_dataset(
+#              "open-images-v6",
+#              splits=['train','test'],
+#              label_types=["detections", "segmentations"],
+#              classes=["Pen", "Computer mouse","Computer keyboard","Computer monitor","Tablet computer"],
+#              max_samples=300, seed=2022,
+#              format='darknet'
+#          )
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: ./custom_img/train.txt 
+val: ./custom_img/validation.txt  
+test: ./custom_img/test.txt 
+
+# number of classes
+nc: 5
+
+# class names
+names: [ "Pen", "Computer mouse","Computer keyboard","Computer monitor","Tablet computer" ]
+#names:
+#0: Pen
+#1: Computer mouse
+#2: Computer keyboard
+#3: Computer monitor
+#4: Tablet computer
